@@ -2,15 +2,22 @@ body{
     background-color:black;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height:100%;
+}
+
+#root{
+    min-height:100vh;
     
 }
 
 #intro{
+    display:-webkit-flex;
+    flex-direction: column;
+    justify-content: center;
     width:100%;
     background-image:url("star2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    border-color:orange;
     animation:fadeout 2s 1;
     animation-fill-mode: forwards;
     
@@ -31,16 +38,17 @@ body{
 }
 
 div{
-    width:100%;
-    height:700px;
+    width:100vw;
+    height:100vh;
 }
 
 
 h1{
-    padding-top:18%;
+    width:100%;
     font-family: 'Russo One', sans-serif;
-    font-size:40px;
+    font-size:5vh;
     animation: blank 2s 1;
+   
 }
 
 @keyframes blank{
@@ -54,9 +62,10 @@ h1{
 
 h2{
     font-family: 'Russo One', sans-serif;
-    font-size:50px;
+    font-size:5vh;
     animation: blank 2s 1;
-
+    margin-top:0;
+    
 }
 
 .white{
@@ -75,9 +84,11 @@ h2{
 }
 
 #navbar{
+    display:-webkit-flex;
+   
     border-bottom: #598AAC;
     border-style:solid;
-    height:80px;
+    height:10vh;
     position:fixed;
     top:0px;
     left:0px;
@@ -91,25 +102,26 @@ h2{
 
 
 #sections{
-    width:fit-content;
-    margin:auto;
-    float: right;
+    margin-top:0;
+    display:inline-flex;
+    justify-content: flex-end;
+    width:89%;
     height:100%;
-   
+
    
 }
 
 li{
-   
+    display:inline-flex;
+    align-items:center;
+    justify-content: center;
     color:#598AAC;
-    display:inline-block;
-    padding-left:40px;
-    padding-right:40px;
-    padding-top:30px;
+    width:10%;
+    margin-right:2%;
     text-align:center;
-    font-size: 20px;
+    font-size: 2.5vh;
     font-family: 'Russo One', sans-serif;
-    height:50px;
+    height:100%;
     
     
 }
@@ -120,8 +132,11 @@ li:hover{
 
 
 a{
+    
+    text-align:center;
     text-decoration: none;
     color:#598AAC;
+    
 }
 
 #logo{
@@ -133,14 +148,15 @@ a{
     border-radius:50%;
     border-style: solid;
     border-color: white;
+    
 
 }
 
 h3{
-    margin-top:0px;
+    margin-top:0;
     margin-bottom:0px;
-    padding-top:50px;
-    font-size:40px;
+    padding-top:15vh;
+    font-size:4vh;
     text-align:center;
     font-family: 'Russo One', sans-serif;
     color:white;
@@ -151,16 +167,21 @@ h3{
     
 }
 
+#school{
+    padding-top:4vh;
+    margin-bottom:4vh;
+}
+
 
 
 #headshot{
-    height:600px;
-    width:400px;
+    height:60vh;
+    width:20vw;
     margin-top:0px;
     float:right;
     position:absolute;
-    top:700px;
-    left:67.5%;
+    top:120vh;
+    right:0;
     
 }
 
@@ -169,23 +190,25 @@ h3{
     margin-top:0px;
     float:right;
     position:absolute;
-    top:-40px;
-    left:-200px;
+    top:50vh;
+    left:4%;
 }
 
 .description{
     color:whitesmoke;
     width:60%;
+    line-height:3vh;
     float:left;
     text-align: left;
     font-family: sans-serif;
-    padding-left:20px;
-    margin-top:20px;
+    padding-left:2vw;
+    font-size:2vh;
     
     
 }
 
 .top{
+    margin-top:5vh;
     width:49%;
 }
 
@@ -200,8 +223,6 @@ h3{
 
 #skills{
     display: block;
-    border-style:solid;
-    border-color:whitesmoke;
     height:fit-content;
     
   
@@ -213,27 +234,51 @@ h3{
     background-repeat:no-repeat;
     background-size: cover;
 }
-
-table{
-    width:90%;
-    height:80%;
+.flex{
+    width:98%;
+    height:550px;
+  
     margin:auto;
-    border-spacing: 25px 20px;
-   
+}
+
+#table{
+    height:fit-content;
+    width:fit-content;
+    padding:0;
+    
+    margin:auto;
+    margin-top:40px;
+    margin-bottom:20px;
    
 }
 
-td{
-    background-color:white;
-    border-radius:5%;
-    height:100px;
-    width:200px;
+.row{
+    margin:0;
+    height:30vh;
+    width:fit-content;
+    margin-bottom:0px;
+    
+   
     
 }
 
-#proj{
+.project-links{
+    display:inline-block;
+    height:30vh;
+    width:25vw;
+    border-radius:3%;
+    background-color:white;
+    margin-right:20px;
+   
+    
+}
+
+.proj{
+    border-radius:3%;
+    display:block;
     height:100%;
     width:100%;
+    margin:0;
 }
 
 #contacts{
@@ -244,8 +289,9 @@ td{
    display:block;
    margin:auto;
    padding:0px;
-   width:fit-content;
-   margin-top:0px;
+   width:55%;
+   margin-top:2vh;
+   margin-bottom:0px;
    border-style: solid;
    border-color: white;
    text-align:center;
@@ -253,11 +299,15 @@ td{
 }
 
 .con{
+    display:inline-block;
+    padding:2vh;
+    width:fit-content;
     text-align:center; 
 }
 
 form{
     padding:50px;
+    padding-top:25px;
     width:70%;
     margin:auto;
     
@@ -279,14 +329,14 @@ input{
     border-style:solid;
     border-width: 5px;
     border-color:#598AAC;
-    width:400px;
-    height:30px;
+    width:22vw;
+    height:3vh;
 }
 
 textarea{
     
-    height:200px;
-    width:400px;
+    height:20vh;
+    width:22vw;
     display:block;
     margin:auto;
     border-style:solid;
@@ -302,8 +352,8 @@ button{
     margin:auto;
     background-color:#598AAC;
     color:white;
-    width:80px;
-    height:30px;
+    width:5vw;
+    height:3vh;
     
 
 }
