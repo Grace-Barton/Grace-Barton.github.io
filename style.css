@@ -273,6 +273,15 @@ h3{
     
 }
 
+.project-linksin{
+    display:inline-block;
+    height:30vh;
+    width:25vw;
+    border-radius:3%;
+    background-color:inherit;
+    margin-right:20px;
+}
+
 .proj{
     border-radius:3%;
     display:block;
